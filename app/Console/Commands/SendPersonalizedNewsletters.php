@@ -47,7 +47,7 @@ class SendPersonalizedNewsletters extends Command
                 $user = $nl->user;
                 if (!$user || !$user->email) continue;
 
-                // 🔹 Testing: send 2 min later
+                // 🔹 1 min delay for testing; live deployে এইটা safe
                 Mail::to($user->email)
                     ->later(now()->addMinutes(1), new DailyNewsletter($newsItems, $nl));
             }

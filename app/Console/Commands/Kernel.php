@@ -9,8 +9,6 @@ class Kernel extends ConsoleKernel
 {
     /**
      * The Artisan commands for the application.
-     *
-     * @var array
      */
     protected $commands = [
         \App\Console\Commands\SendPersonalizedNewsletters::class,
